@@ -1,0 +1,66 @@
+{
+    "name": "blog-server",
+    "version": "1.0.0",
+    "description": "blog server ",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "cross-env NODE_ENV=development  nodemon"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/song111/blog-server.git"
+    },
+    "keywords": [
+        "blog",
+        "server"
+    ],
+    "author": "Chris Song",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/song111/blog-server/issues"
+    },
+    "homepage": "https://github.com/song111/blog-server#readme",
+    "devDependencies": {
+        "@types/koa": "^2.11.3",
+        "@typescript-eslint/eslint-plugin": "^2.33.0",
+        "@typescript-eslint/parser": "^2.33.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.1.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.20.2",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.2",
+        "nodemon": "^2.0.4",
+        "prettier": "^2.0.5"
+    },
+    "dependencies": {
+        "cross-env": "^7.0.2",
+        "fs-extra": "^9.0.0",
+        "koa": "^2.11.0",
+        "koa-bodyparser": "^4.3.0",
+        "koa-compose": "^4.1.0",
+        "koa-helmet": "^5.2.0",
+        "koa-jwt": "^3.6.0",
+        "koa-logger": "^3.2.1",
+        "koa-response-time": "^2.1.0",
+        "koa-static": "^5.0.0",
+        "lodash": "^4.17.15",
+        "log-symbols": "^3.0.0",
+        "mongoose": "^5.9.7",
+        "ts-node": "^8.10.1",
+        "typescript": "^3.9.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,js}": [
+            "eslint -c .eslintrc.js"
+        ],
+        "*.{ts,json,md}": [
+            "prettier --write"
+        ]
+    }
+}

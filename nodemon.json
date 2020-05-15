@@ -1,0 +1,6 @@
+{
+    "verbose": true,
+    "watch": ["src/", "configs/", "utils/"],
+    "ext": "js,json,ts",
+    "exec": "ts-node ./src/index.ts"
+}
