@@ -4,7 +4,8 @@
     "description": "blog server ",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "cross-env NODE_ENV=development  nodemon"
+        "start": "cross-env NODE_ENV=development  nodemon",
+        "lint": "eslint -c .eslintrc.js --ext .ts,.js *.ts"
     },
     "repository": {
         "type": "git",
@@ -34,6 +35,10 @@
         "prettier": "^2.0.5"
     },
     "dependencies": {
+        "@hapi/boom": "^9.1.0",
+        "@hapi/joi": "^17.1.1",
+        "@types/mongoose": "^5.7.19",
+        "chalk": "^4.0.0",
         "cross-env": "^7.0.2",
         "fs-extra": "^9.0.0",
         "koa": "^2.11.0",
